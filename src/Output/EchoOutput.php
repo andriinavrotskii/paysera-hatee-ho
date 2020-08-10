@@ -8,23 +8,42 @@ class EchoOutput implements OutputInterface
 
     /**
      * @param string $string
-     * @param array $options
+     * @param array|null $options
      */
-    public function write(string $string, array $options): void
+    public function write(string $string, array $options = null): void
     {
-        $this->useDelimiterOption($options);
-        echo $string;
+        $this->useDelimiter($options);
+        $this->actionWrite($string);
     }
 
     /**
-     * @param array $options
+     * @param array|null $options
      */
-    private function useDelimiterOption(array $options): void
+    private function useDelimiter(?array $options): void
     {
-        if (!\array_key_exists('firstOne', $options) && !\is_float($options['firstOne'])) {
-           return;
+        if ($this->isShow($options)) {
+            $this->actionWrite(static::DELIMITER);
+        }
+    }
+
+    private function isShow(?array $options): bool
+    {
+        if (\is_null($options)) {
+            $result = true;
+        } else {
+            $result = \array_key_exists('firstOne', $options)
+                && \is_bool($options['firstOne'])
+                && false === $options['firstOne'];
         }
 
-        echo self::DELIMITER;
+        return $result;
+    }
+
+    /**
+     * @param string $string
+     */
+    private function actionWrite(string $string): void
+    {
+        echo $string;
     }
 }

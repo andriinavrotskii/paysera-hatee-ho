@@ -4,6 +4,7 @@
         "psr-4": {"Task\\": "src/"}
     },
     "require": {
-        "php-di/php-di": "^6.2"
+        "php-di/php-di": "^6.2",
+        "bensampo/laravel-enum": "^2.1"
     }
 }

@@ -6,7 +6,7 @@ interface OutputInterface
 {
     /**
      * @param string $string
-     * @param array $options
+     * @param array|null $options
      */
-    public function write(string $string, array $options): void;
+    public function write(string $string, array $options = null): void;
 }
