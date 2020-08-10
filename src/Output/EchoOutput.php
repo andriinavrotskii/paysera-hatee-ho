@@ -26,6 +26,10 @@ class EchoOutput implements OutputInterface
         }
     }
 
+    /**
+     * @param array|null $options
+     * @return bool
+     */
     private function isShow(?array $options): bool
     {
         if (\is_null($options)) {

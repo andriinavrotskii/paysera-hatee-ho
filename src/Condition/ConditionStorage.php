@@ -4,6 +4,9 @@ namespace Task\Condition;
 
 class ConditionStorage
 {
+    /**
+     * @return string[]|ConditionInterface
+     */
     public function getTask1Conditions(): array
     {
         return [
@@ -14,6 +17,9 @@ class ConditionStorage
         ];
     }
 
+    /**
+     * @return string[]|ConditionInterface
+     */
     public function getTask2Conditions(): array
     {
         return [
@@ -24,6 +30,9 @@ class ConditionStorage
         ];
     }
 
+    /**
+     * @return string[]|ConditionInterface
+     */
     public function getTask3Conditions(): array
     {
         return [

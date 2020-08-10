@@ -25,5 +25,4 @@ class ConditionCombined implements ConditionInterface
 
         return implode('', $results);
     }
-
 }

@@ -43,16 +43,18 @@ class OutputStrategy
     {
         switch ($outputType) {
             case OutputTypeEnum::ECHO:
-                return $this->echoOutput;
+                $result = $this->echoOutput;
                 break;
             case OutputTypeEnum::ECHO_DASH:
-                return $this->echoOutputDashDelimiter;
+                $result = $this->echoOutputDashDelimiter;
                 break;
             case OutputTypeEnum::ECHO_SPACE:
-                return $this->echoOutputSpaceDelimiter;
+                $result = $this->echoOutputSpaceDelimiter;
                 break;
             default:
                 throw new \LogicException('Unknown output type.');
         }
+
+        return $result;
     }
 }

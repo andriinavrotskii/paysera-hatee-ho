@@ -13,6 +13,7 @@ class Controller
      * @var OutputStrategy
      */
     private $outputStrategy;
+
     /**
      * @var Service
      */
@@ -21,6 +22,7 @@ class Controller
     /**
      * Controller constructor.
      * @param OutputStrategy $outputStrategy
+     * @param Service $service
      */
     public function __construct(OutputStrategy $outputStrategy, Service $service)
     {
