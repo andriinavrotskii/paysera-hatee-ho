@@ -1,5 +1,5 @@
 {
-    "name": "andrii/paysera1",
+    "name": "andrii/paysera_hatee_ho",
     "autoload": {
         "psr-4": {"Task\\": "src/"}
     },
